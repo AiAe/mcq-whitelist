@@ -10,6 +10,7 @@ class User extends Authenticatable
 {
     protected $fillable = [
         'quaver_user_id',
+        'quaver_username',
         'username',
         'password',
     ];

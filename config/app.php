@@ -127,4 +127,10 @@ return [
     'rcon_port' => env('RCON_PORT', 9200),
     'rcon_password' => env('RCON_PASSWORD', ''),
 
+    'server_ip' => env('SERVER_IP', '127.0.0.1'),
+    'server_name' => env('SERVER_MC_NAME', 'Minecraft'),
+    'server_url' => env('SERVER_MC_MODPACK_URL', ''),
+    'quaver_user_id_owner' => env('QUAVER_USER_ID_OWNER', '2'), // Defaults to QuaverBot
+    'quaver_auth_url' => env('QUAVER_AUTH_URL', ''),
+
 ];

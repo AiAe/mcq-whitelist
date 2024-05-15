@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('quaver_user_id');
+            $table->string('quaver_username');
             $table->string('username')->nullable()->unique();
             $table->string('password')->nullable();
             $table->boolean('is_donator')->default(false)->nullable();

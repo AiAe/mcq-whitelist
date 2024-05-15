@@ -76,6 +76,7 @@ class AuthController extends Controller
         if (empty($user)) {
             $user = User::create([
                 'quaver_user_id' => $providerUser->quaver_user_id,
+                'quaver_username' => $providerUser->quaver_username,
             ]);
         }
 

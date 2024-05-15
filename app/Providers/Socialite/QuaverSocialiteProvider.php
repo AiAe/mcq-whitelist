@@ -42,7 +42,8 @@ class QuaverSocialiteProvider extends AbstractProvider
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'quaver_user_id' => $user['user']['id']
+            'quaver_user_id' => $user['user']['id'],
+            'quaver_username' => $user['user']['username']
         ]);
     }
 }
