@@ -10,7 +10,7 @@
             <div>{{ config('app.server_name') }}</div>
             @if(config('app.quaver_auth_url'))
             <div>
-                <a href="{{ config('app.quaver_auth_url') }}" target="_blank">Download Modpack</a>
+                <a href="{{ config('app.server_url') }}" target="_blank">Download Modpack</a>
             </div>
             @endif
             <small>If you have new Minecraft username or issues, please contact site owner!</small>
