@@ -7,7 +7,7 @@
         Welcome, {{ Auth::user()->username??"Unknown" }}
         @if(Auth::user()->username && Auth::user()->is_donator)
             <div>IP <code>{{ config('app.server_ip') }}</code></div>
-            <div>{{ config('app.server_name') }}</div>
+            <div>{!! config('app.server_name') !!}</div>
             @if(config('app.server_url'))
             <div>
                 <a href="{{ config('app.server_url') }}" target="_blank">Download Modpack</a>
