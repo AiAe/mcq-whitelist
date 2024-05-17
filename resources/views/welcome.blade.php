@@ -8,6 +8,11 @@
         @if(Auth::user()->username && Auth::user()->is_donator)
             <div>IP <code>{{ config('app.server_ip') }}</code></div>
             <div>{{ config('app.server_name') }}</div>
+            @if(config('app.quaver_auth_url'))
+            <div>
+                <a href="{{ config('app.quaver_auth_url') }}" target="_blank">Download Modpack</a>
+            </div>
+            @endif
             <small>If you have new Minecraft username or issues, please contact site owner!</small>
             <div>
                 <h2>Rules</h2>
