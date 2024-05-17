@@ -36,6 +36,10 @@ class User extends Authenticatable
             $method = $remove ? "remove" : "add";
 
             $rcon->sendCommand(sprintf("whitelist %s %s", $method, $this->username));
+        } else {
+            // Don't save username if it fails to connect to rcon
+            $this->username = null;
+            $this->save();
         }
     }
 
@@ -53,6 +57,8 @@ class User extends Authenticatable
             return array_map(function ($item) {
                 return trim(mb_strtolower($item));
             }, $players);
+        } else {
+            return [];
         }
     }
 
